@@ -7,7 +7,10 @@ import openpyxl
 import csv
 import datetime
 
-
+Path_input_file = 'D:\\Harish kemkar\\SRE\\Python  files\\File_Project'
+input_file_name = 'Capital.txt'
+input_file_full_path = Path_input_file + '\\' + input_file_name
+print(input_file_full_path)
 
 # Get the current timestamp
 timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -15,18 +18,12 @@ timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
 file_name = f"file_{timestamp}.csv"
 print(file_name)
 
-
-
 ## To read the .txt file having city names
 ## file read and saved in list data type
 
-with open('Capital.txt','r') as file:
+with open(input_file_full_path,'r') as file:
     lines=file.readlines()
 
-# print(lines[0])
-
-# print(len(lines))
-## le
 
 ## run the api call for All city  names in list
 api_key = '5a377f26b5bd43d298980919243011' # Replace with your actual API key
